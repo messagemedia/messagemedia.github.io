@@ -1,0 +1,26 @@
+{% assign project-column = project-index | modulo: 4 %}
+{% if project-column == 0 %}
+<div class="row">
+{% endif %}
+ <div class="col-md-3">
+  <div class="project-cell">
+   <h3><a href="{{repository.html_url}}" target="_blank">{{repository.name}}</a></h3>
+   <div class="repo-info">
+    <span><i class="octicon octicon-star"></i>{{repository.stargazers_count}}</span>
+    <span><i class="octicon octicon-repo-forked"></i>{{repository.forks_count}}</span>
+    <span class="language {{repository.language}}">{{repository.language}}</span>
+   </div>
+   <p>{{repository.description}}</p>
+   {% case repository.language %}
+   {% when 'C#' %}
+   {% assign language-icon-name = 'csharp' %}
+   {% else %}
+   {% assign language-icon-name = repository.language | downcase %}
+   {% endcase %}
+   <i class="devicon devicon-{{language-icon-name}}-plain colored" title="{{repository.language}}"></i>
+  </div>
+ </div>
+{% if project-column == 3 %}
+</div>
+{% endif %}
+{% assign project-index = project-index | plus: 1 %}

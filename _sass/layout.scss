@@ -1,0 +1,26 @@
+.project-cell h3 {
+    height: 35px;
+    margin-top: 15px;
+}
+
+.project-cell {
+    margin-bottom: 15px;
+    border: 1px solid #eaf0f2;
+    border-radius: 4px;
+    padding: 0 10px;
+    height: 180px;
+}
+
+.project-cell .repo-info {
+    margin-bottom: 10px;
+}
+
+.project-cell .repo-info span {
+    margin-right: 20px;
+}
+
+.project-cell .devicon {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+}

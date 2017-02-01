@@ -1,0 +1,11 @@
+title: MessageMedia Open Source
+description: Open source projects at MessageMedia
+github_username: messagemedia
+repository: messagemedia/messagemedia.github.io
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+gems:
+  - jekyll-github-metadata
