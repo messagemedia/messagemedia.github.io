@@ -20,8 +20,7 @@ layout: default
 {% for repository in site.github.public_repositories %}
   {% if repository.private == false %}
     {% comment %} Improve this is better naming convention(s) {% endcomment %}
-    {% if repository.name contains 'messagemedia-rest' %}
-    {% elsif repository.name contains 'messagemedia-' %}
+    {% if repository.name contains 'messagemedia-soap-api' %}
       {% include project.html %}
     {% endif %}
   {% endif %}
@@ -32,7 +31,8 @@ layout: default
 {% for repository in site.github.public_repositories %}
   {% if repository.private == false %}
     {% comment %} Improve this is better naming convention(s) {% endcomment %}
-    {% if repository.name contains 'messagemedia-' %}
+    {% if repository.name contains 'messagemedia-soap-api'
+       or repository.name contains 'messagemedia-rest-api' %}
     {% else %}{% include project.html %}
     {% endif %}
   {% endif %}
