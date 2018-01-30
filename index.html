@@ -6,6 +6,16 @@ layout: default
  <p class="lead">We're excited about helping developers build and share software.</p>
 </div>
 
+{% include projects-begin.html category="Messages SDKs" %}
+{% for repository in site.github.public_repositories %}
+  {% if repository.private == false %}
+    {% if repository.name contains 'messages' %}
+      {% include project.html %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+{% include projects-end.html %}
+
 {% include projects-begin.html category="REST SDKs" %}
 {% for repository in site.github.public_repositories %}
   {% if repository.private == false %}
