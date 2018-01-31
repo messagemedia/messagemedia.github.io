@@ -16,6 +16,16 @@ layout: default
 {% endfor %}
 {% include projects-end.html %}
 
+{% include projects-begin.html category="Lookups SDKs" %}
+{% for repository in site.github.public_repositories %}
+  {% if repository.private == false %}
+    {% if repository.name contains 'lookups' %}
+      {% include project.html %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+{% include projects-end.html %}
+
 {% include projects-begin.html category="REST SDKs" %}
 {% for repository in site.github.public_repositories %}
   {% if repository.private == false %}
