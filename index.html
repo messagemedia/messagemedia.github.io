@@ -52,7 +52,9 @@ layout: default
   {% if repository.private == false %}
     {% comment %} Improve this is better naming convention(s) {% endcomment %}
     {% if repository.name contains 'messagemedia-soap-api'
-       or repository.name contains 'messagemedia-rest-api' %}
+       or repository.name contains 'messagemedia-rest-api'
+       or repository.name contains 'messages-sdk'
+       or repository.name contains 'lookups-sdk' %}
     {% else %}{% include project.html %}
     {% endif %}
   {% endif %}
